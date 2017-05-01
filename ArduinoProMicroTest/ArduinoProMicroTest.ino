@@ -147,6 +147,12 @@ void loop()
 
   bool pwchkChange = lastpwchk != pwchk;
   if (pwchkChange) {
+    // reread, aka debounce
+    delay(1);
+    pwchk = PINB & B00100000;
+    pwchkChange = lastpwchk != pwchk;
+  }
+  if (pwchkChange) {
     // TODO somehow ignore minimal glitches!
     lastpwchk = pwchk;
     if (pwchk) lastpwchkok = now;
@@ -260,3 +266,4 @@ void loop()
 
   Serial.println(" ");
 }
+
