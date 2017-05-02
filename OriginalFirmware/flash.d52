@@ -1,0 +1,3867 @@
+;
+;  D52 V3.3.6 8052 Disassembly of .\flash.bin
+;  05/02/17 20:48
+;
+	org	0
+;
+	reti	
+;
+	org	2
+;
+	orl	c,/i2sta.7
+	mov	r1,a
+	mov	r7,a
+	mov	r0,t3
+	mov	p3,#0
+	nop	
+	rlc	a
+	nop	
+	mov	37h,#0
+	mov	pwena,#75h
+	mov	rb0r0,r0
+	mov	th1,#0c0h
+	mov	36h,#12h
+	addc	a,r0
+	sjmp	Xffa8
+;
+	lcall	X750f
+	subb	a,r0
+	lcall	X3a74
+	ajmp	X0075
+;
+	addc	a,r4
+	mov	a,#2
+	mov	a,rb2r5
+	subb	a,0e5h
+	mov	95h,a
+	sjmp	X0058
+;
+	mov	a,#0f5h
+	mov	a,#2
+	mov	85h,#64h
+	mov	a,#12h
+	add	a,r1
+	addc	a,r5
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+X0058:	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+X0075:	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	movx	a,@r0
+	inc	r4
+	mov	39h,#80h
+	mov	r0,#39h
+	mov	a,#89h
+	mov	48h,#2
+	lcall	X1ad5
+	mov	75h,#15h
+	mov	76h,#0fh
+	mov	r0,#76h
+	mov	a,#98h
+	mov	48h,#2
+	lcall	X1ad5
+	mov	3ah,#10h
+	mov	r0,#3ah
+	mov	a,#8fh
+	mov	48h,#1
+	lcall	X1ad5
+	mov	3bh,#0
+	mov	3ch,#0
+	mov	r0,#3ch
+	mov	a,#94h
+	mov	48h,#2
+	lcall	X1ad5
+	mov	a,37h
+	jnb	acc.7,X00d3
+	clr	c
+	mov	a,#75h
+	subb	a,36h
+	mov	3dh,a
+	mov	a,37h
+	cpl	acc.7
+	mov	3eh,a
+	mov	a,#8
+	subb	a,3eh
+	mov	3eh,a
+	sjmp	X00df
+;
+X00d3:	mov	a,#75h
+	add	a,36h
+	mov	3dh,a
+	mov	a,#8
+	addc	a,37h
+	mov	3eh,a
+X00df:	mov	r0,#3eh
+	mov	a,#95h
+	mov	48h,#2
+	lcall	X1ad5
+	mov	p0,#0
+	setb	p0.5
+	mov	a,#0e3h
+	mov	64h,a
+	lcall	X1b87
+	mov	a,#1
+	mov	64h,a
+	lcall	X1b87
+	mov	a,#29h
+	mov	64h,a
+	lcall	X1b87
+	mov	64h,#3
+	lcall	X1b87
+	clr	a
+	mov	r0,#0
+X010c:	lcall	X1c08
+	lcall	X1d83
+	lcall	X1d83
+	inc	r0
+	cjne	r0,#1eh,X010c
+	mov	r0,#0
+	lcall	X1c19
+	mov	69h,#1
+	mov	6ah,#1
+	mov	6bh,#1
+	mov	7fh,#1
+	clr	tf1
+	setb	et1
+	setb	tr1
+	clr	tf0
+	setb	et0
+	setb	tr0
+	clr	ie0
+	setb	ex0
+	setb	ea
+	lcall	X1d83
+	clr	ie1
+	setb	ex1
+	lcall	X1d83
+	lcall	X1d83
+	lcall	X1d83
+	lcall	X1d83
+	lcall	X1d83
+	lcall	X1d83
+	lcall	X1d83
+	lcall	X1d83
+	mov	72h,#0
+	mov	r0,#4fh
+	mov	73h,#6
+	lcall	X1cef
+	mov	72h,#6
+	mov	r0,#33h
+	mov	73h,#5
+	lcall	X1cef
+	mov	72h,#0bh
+	mov	r0,#6dh
+	mov	73h,#3
+	lcall	X1cef
+	mov	a,4fh
+	cjne	a,#55h,X0188
+X0181:	mov	a,6fh
+	cjne	a,#55h,X018d
+	sjmp	X019e
+;
+X0188:	lcall	X1d2a
+	sjmp	X0181
+;
+X018d:	lcall	X1d47
+	lcall	X1d8c
+	mov	72h,#0
+	mov	r0,#4fh
+	mov	73h,#4
+	lcall	X1cef
+X019e:	clr	c
+	mov	a,#3fh
+	subb	a,50h
+	mov	a,#42h
+	subb	a,51h
+	mov	a,#0fh
+	subb	a,52h
+	jnc	X01b8
+	mov	52h,#0
+	mov	51h,#0
+	mov	50h,#0
+	sjmp	X01cc
+;
+X01b8:	mov	r2,53h
+	mov	r3,54h
+	mov	r4,50h
+	mov	r5,51h
+	mov	r6,52h
+	acall	X0258
+	mov	55h,r0
+	mov	56h,r1
+	mov	57h,r2
+	mov	58h,r3
+X01cc:	mov	a,5ch
+	jnz	X01d9
+	mov	a,5bh
+	jnz	X01d9
+	mov	63h,#0
+	sjmp	X01ff
+;
+X01d9:	mov	r3,5ah
+	mov	r2,59h
+	mov	r6,#0
+	mov	r5,#0
+	mov	r4,#64h
+	acall	X0258
+	mov	a,r3
+	mov	r4,a
+	mov	a,r2
+	mov	r3,a
+	mov	a,r1
+	mov	r2,a
+	mov	a,r0
+	mov	r1,a
+	mov	r6,5ch
+	mov	r5,5bh
+	acall	X0538
+	mov	a,r3
+	subb	a,#64h
+	jnc	X01fc
+	mov	63h,r3
+	sjmp	X01ff
+;
+X01fc:	mov	63h,#64h
+X01ff:	mov	pcon,#1
+	sjmp	X019e
+;
+X0204:	mov	r0,#78h
+	mov	r1,#3
+	clr	a
+X0209:	mov	@r0,a
+	inc	r0
+	djnz	r1,X0209
+	mov	r1,#18h
+X020f:	mov	r0,#75h
+	mov	r2,#3
+	clr	c
+X0214:	mov	a,@r0
+	rlc	a
+	mov	@r0,a
+	inc	r0
+	djnz	r2,X0214
+	mov	r2,#3
+	mov	r0,#78h
+X021e:	mov	a,@r0
+	addc	a,@r0
+	da	a
+	mov	@r0,a
+	inc	r0
+	djnz	r2,X021e
+	djnz	r1,X020f
+	ret	
+;
+X0228:	mov	r0,#79h
+	mov	r1,#4
+	clr	a
+X022d:	mov	@r0,a
+	inc	r0
+	djnz	r1,X022d
+	mov	79h,#0
+	mov	7ah,#0
+	mov	7bh,#0
+	mov	7ah,#0
+	mov	r1,#20h
+X023f:	mov	r0,#75h
+	mov	r2,#4
+	clr	c
+X0244:	mov	a,@r0
+	rlc	a
+	mov	@r0,a
+	inc	r0
+	djnz	r2,X0244
+	mov	r2,#4
+	mov	r0,#79h
+X024e:	mov	a,@r0
+	addc	a,@r0
+	da	a
+	mov	@r0,a
+	inc	r0
+	djnz	r2,X024e
+	djnz	r1,X023f
+	ret	
+;
+X0258:	mov	a,r2
+	mov	b,r4
+	mul	ab
+	mov	r1,b
+	mov	r0,a
+	mov	a,r2
+	mov	b,r5
+	mul	ab
+	add	a,r1
+	mov	r1,a
+	clr	a
+	addc	a,b
+	mov	r7,a
+	mov	a,r2
+	mov	b,r6
+	mul	ab
+	add	a,r7
+	mov	r2,a
+	clr	a
+	addc	a,b
+	mov	r7,a
+	mov	a,r3
+	mov	b,r4
+	mul	ab
+	add	a,r1
+	mov	r1,a
+	mov	a,r2
+	addc	a,b
+	mov	r2,a
+	mov	a,r3
+	mov	b,r5
+	mul	ab
+	add	a,r2
+	mov	r2,a
+	mov	a,r7
+	addc	a,b
+	mov	r7,a
+	mov	a,r3
+	mov	b,r6
+	mul	ab
+	add	a,r7
+	mov	r3,a
+	ret	
+;
+	push	acc
+	push	psw
+	push	rb0r0
+	push	rb0r1
+	push	rb0r2
+	push	rb0r3
+	push	rb0r4
+	push	rb0r5
+	push	rb0r6
+	push	rb0r7
+	clr	ie0
+	clr	ex0
+	inc	4bh
+	mov	a,#3
+	mov	r0,#4eh
+	mov	48h,#3
+	lcall	X1b32
+	clr	c
+	mov	a,30h
+	add	a,4ch
+	mov	30h,a
+	mov	a,31h
+	addc	a,4dh
+	mov	31h,a
+	mov	a,4ch
+	add	a,67h
+	mov	67h,a
+	mov	a,4dh
+	addc	a,68h
+	mov	68h,a
+	clr	c
+	mov	a,#70h
+	subb	a,30h
+	mov	a,#0fdh
+	subb	a,31h
+	jnc	X030e
+	clr	c
+	mov	a,50h
+	add	a,#1
+	mov	50h,a
+	mov	a,51h
+	addc	a,#0
+	mov	51h,a
+	mov	a,52h
+	addc	a,#0
+	mov	52h,a
+	mov	31h,#0
+	mov	30h,#0
+	clr	c
+	mov	a,#0fh
+	cjne	a,52h,X030e
+	clr	c
+	mov	a,#42h
+	cjne	a,51h,X030e
+	clr	c
+	mov	a,#40h
+	cjne	a,50h,X030e
+	mov	52h,#0
+	mov	51h,#0
+	mov	50h,#0
+	sjmp	X030e
+;
+X030c:	ajmp	X03aa
+;
+X030e:	mov	a,4bh
+	cjne	a,#32h,X030c
+	mov	a,6eh
+	jnb	acc.7,X0329
+	clr	c
+	mov	a,#56h
+	subb	a,6dh
+	mov	r2,a
+	mov	a,6eh
+	cpl	acc.7
+	mov	r3,a
+	mov	a,#14h
+	subb	a,r3
+	mov	r3,a
+	sjmp	X0333
+;
+X0329:	mov	a,#56h
+	add	a,6dh
+	mov	r2,a
+	mov	a,#14h
+	addc	a,6eh
+	mov	r3,a
+X0333:	mov	r6,#0
+	mov	r5,68h
+	mov	r4,67h
+	mov	68h,#0
+	mov	67h,#0
+	acall	X0258
+	mov	a,r3
+	mov	r4,a
+	mov	a,r2
+	mov	r3,a
+	mov	a,r1
+	mov	r2,a
+	mov	a,r0
+	mov	r1,a
+	mov	r6,#27h
+	mov	r5,#10h
+	acall	X0538
+	mov	59h,r1
+	mov	5ah,r2
+	mov	a,#6
+	mov	r0,#4eh
+	mov	48h,#3
+	lcall	X1b32
+	mov	a,6eh
+	jnb	acc.7,X0373
+	clr	c
+	mov	a,#0
+	subb	a,6dh
+	mov	r2,a
+	mov	a,6eh
+	cpl	acc.7
+	mov	r3,a
+	mov	a,#18h
+	subb	a,r3
+	mov	r3,a
+	sjmp	X037d
+;
+X0373:	mov	a,#0
+	add	a,6dh
+	mov	r2,a
+	mov	a,#18h
+	addc	a,6eh
+	mov	r3,a
+X037d:	mov	r6,4eh
+	mov	r5,4dh
+	mov	r4,4ch
+	acall	X0258
+	mov	a,r3
+	mov	r4,a
+	mov	a,r2
+	mov	r3,a
+	mov	a,r1
+	mov	r2,a
+	mov	a,r0
+	mov	r1,a
+	mov	r6,#27h
+	mov	r5,#10h
+	acall	X0538
+	mov	5bh,r1
+	mov	5ch,r2
+	clr	c
+	mov	a,59h
+	subb	a,5bh
+	mov	a,5ah
+	subb	a,5ch
+	jc	X03aa
+	mov	a,59h
+	mov	5bh,a
+	mov	a,5ah
+	mov	5ch,a
+X03aa:	mov	a,#16h
+	mov	r0,#4eh
+	mov	48h,#3
+	lcall	X1b32
+	acall	X04d0
+	clr	c
+	mov	a,3fh
+	add	a,4ch
+	mov	3fh,a
+	mov	a,40h
+	addc	a,4dh
+	mov	40h,a
+	clr	a
+	addc	a,41h
+	mov	41h,a
+	mov	a,4bh
+	cjne	a,#32h,X03fb
+	clr	c
+	mov	r3,41h
+	mov	r2,40h
+	mov	r1,3fh
+	mov	r7,#32h
+	acall	X055f
+	mov	60h,r2
+	mov	5fh,r1
+	mov	3fh,#0
+	mov	40h,#0
+	mov	41h,#0
+	mov	a,5ah
+	cjne	a,#0,X03fb
+	mov	a,59h
+	cjne	a,#0,X03fb
+	mov	5fh,#0
+	mov	60h,#0
+	mov	5bh,#0
+	mov	5ch,#0
+X03fb:	mov	a,#17h
+	mov	r0,#4eh
+	mov	48h,#3
+	lcall	X1b32
+	acall	X048b
+	clr	c
+	mov	a,42h
+	add	a,4ch
+	mov	42h,a
+	mov	a,43h
+	addc	a,4dh
+	mov	43h,a
+	clr	a
+	addc	a,44h
+	mov	44h,a
+	mov	a,4bh
+	cjne	a,#32h,X0436
+	clr	c
+	mov	r3,44h
+	mov	r2,43h
+	mov	r1,42h
+	mov	r7,#32h
+	acall	X055f
+	mov	5eh,r2
+	mov	5dh,r1
+	mov	42h,#0
+	mov	43h,#0
+	mov	44h,#0
+X0436:	mov	a,#27h
+	mov	r0,#4dh
+	mov	48h,#2
+	lcall	X1b32
+	acall	X050b
+	clr	c
+	mov	a,45h
+	add	a,4ch
+	mov	45h,a
+	mov	a,46h
+	addc	a,4dh
+	mov	46h,a
+	clr	a
+	addc	a,47h
+	mov	47h,a
+	mov	a,4bh
+	cjne	a,#32h,X0474
+	mov	4bh,#0
+	clr	c
+	mov	r3,47h
+	mov	r2,46h
+	mov	r1,45h
+	mov	r7,#32h
+	acall	X055f
+	mov	62h,r2
+	mov	61h,r1
+	mov	47h,#0
+	mov	46h,#0
+	mov	45h,#0
+X0474:	setb	ex0
+	pop	rb0r7
+	pop	rb0r6
+	pop	rb0r5
+	pop	rb0r4
+	pop	rb0r3
+	pop	rb0r2
+	pop	rb0r1
+	pop	rb0r0
+	pop	psw
+	pop	acc
+	reti	
+;
+X048b:	mov	r6,4eh
+	mov	r5,4dh
+	mov	r4,4ch
+	mov	a,34h
+	jnb	acc.7,X04a7
+	clr	c
+	mov	a,#0c8h
+	subb	a,33h
+	mov	r2,a
+	mov	a,34h
+	cpl	acc.7
+	mov	r3,a
+	mov	a,#7
+	subb	a,r3
+	mov	r3,a
+	sjmp	X04b1
+;
+X04a7:	mov	a,#0c8h
+	add	a,33h
+	mov	r2,a
+	mov	a,#7
+	addc	a,34h
+	mov	r3,a
+X04b1:	acall	X0258
+	mov	a,r3
+	mov	r4,a
+	mov	a,r2
+	mov	r3,a
+	mov	a,r1
+	mov	r2,a
+	mov	a,r0
+	mov	r1,a
+	mov	r6,#0c3h
+	mov	r5,#50h
+	acall	X0538
+	mov	a,r4
+	mov	r2,a
+	mov	a,r3
+	mov	r1,a
+	mov	r3,#0
+	mov	r7,#2
+	acall	X055f
+	mov	4ch,r1
+	mov	4dh,r2
+	ret	
+;
+X04d0:	mov	r6,4eh
+	mov	r5,4dh
+	mov	r4,4ch
+	mov	a,35h
+	jnb	acc.7,X04e5
+	cpl	acc.7
+	mov	r2,a
+	mov	a,#3ch
+	clr	c
+	subb	a,r2
+	mov	r2,a
+	sjmp	X04ea
+;
+X04e5:	mov	a,#3ch
+	add	a,35h
+	mov	r2,a
+X04ea:	mov	r3,#0
+	acall	X0258
+	mov	a,r3
+	mov	r4,a
+	mov	a,r2
+	mov	r3,a
+	mov	a,r1
+	mov	r2,a
+	mov	a,r0
+	mov	r1,a
+	mov	r6,#0bh
+	mov	r5,#0b8h
+	acall	X0538
+	mov	a,r4
+	mov	r2,a
+	mov	a,r3
+	mov	r1,a
+	mov	r3,#0
+	mov	r7,#0ah
+	acall	X055f
+	mov	4dh,r2
+	mov	4ch,r1
+	ret	
+;
+X050b:	mov	r6,#0
+	mov	r5,4dh
+	mov	r4,4ch
+	mov	r3,#0
+	mov	r2,#0dfh
+	acall	X0258
+	mov	a,r3
+	mov	r4,a
+	mov	a,r2
+	mov	r3,a
+	mov	a,r1
+	mov	r2,a
+	mov	a,r0
+	mov	r1,a
+	mov	r6,#0
+	mov	r5,#64h
+	acall	X0538
+	mov	a,r4
+	mov	r6,a
+	mov	a,r3
+	mov	r5,a
+	mov	r4,#5
+	mov	r3,#0f4h
+	mov	r2,#5ah
+	mov	r1,#90h
+	acall	X0538
+	mov	4dh,r4
+	mov	4ch,r3
+	ret	
+;
+X0538:	mov	b,#10h
+X053b:	clr	c
+	mov	a,r1
+	rlc	a
+	mov	r1,a
+	mov	a,r2
+	rlc	a
+	mov	r2,a
+	mov	a,r3
+	rlc	a
+	mov	r3,a
+	xch	a,r4
+	rlc	a
+	xch	a,r4
+	mov	f0,c
+	clr	c
+	subb	a,r5
+	mov	r0,a
+	mov	a,r4
+	subb	a,r6
+	anl	c,/f0
+	jc	X0557
+	mov	r4,a
+	mov	a,r0
+	mov	r3,a
+	inc	r1
+X0557:	djnz	b,X053b
+	mov	a,r2
+	mov	r4,a
+	mov	a,r1
+	mov	r3,a
+	ret	
+;
+X055f:	mov	r4,#10h
+X0561:	clr	c
+	mov	a,r1
+	rlc	a
+	mov	r1,a
+	mov	a,r2
+	rlc	a
+	mov	r2,a
+	mov	a,r3
+	rlc	a
+	mov	r3,a
+	mov	f0,c
+	clr	c
+	subb	a,r7
+	anl	c,/f0
+	jc	X0575
+	mov	r3,a
+	inc	r1
+X0575:	djnz	r4,X0561
+	mov	a,r3
+	add	a,r3
+	jc	X057e
+	subb	a,r7
+	jc	X0583
+X057e:	inc	r1
+	mov	a,r1
+	jnz	X0583
+	inc	r2
+X0583:	clr	ov
+	ret	
+;
+	push	acc
+	push	psw
+	push	rb0r0
+	push	rb0r1
+	push	rb0r2
+	push	rb0r3
+	push	rb0r4
+	push	rb0r5
+	push	rb0r6
+	push	rb0r7
+	clr	tf0
+	clr	tr0
+	clr	et0
+	mov	a,74h
+	jb	acc.0,X05aa
+	jb	acc.1,X05ad
+	sjmp	X05b0
+;
+X05aa:	ljmp	X0daa
+;
+X05ad:	ljmp	X1093
+;
+X05b0:	mov	a,69h
+	cjne	a,#1,X05b7
+	sjmp	X05e8
+;
+X05b7:	cjne	a,#2,X05bc
+	ajmp	X06fa
+;
+X05bc:	cjne	a,#3,X05c1
+	ajmp	X07b8
+;
+X05c1:	cjne	a,#4,X05c7
+	ljmp	X08be
+;
+X05c7:	cjne	a,#5,X05cd
+	ljmp	X09af
+;
+X05cd:	cjne	a,#6,X05d3
+	ljmp	X0a9c
+;
+X05d3:	cjne	a,#7,X05d9
+	ljmp	X0b77
+;
+X05d9:	cjne	a,#8,X05df
+	ljmp	X0c34
+;
+X05df:	cjne	a,#9,X05e5
+	ljmp	X0cfa
+;
+X05e5:	ljmp	X1481
+;
+X05e8:	mov	75h,55h
+	mov	76h,56h
+	mov	77h,57h
+	mov	78h,58h
+	acall	X0228
+	mov	79h,7ah
+	mov	7ah,7bh
+	mov	7bh,7ch
+	mov	a,79h
+	anl	a,#0fh
+	mov	dptr,#X1c2a
+	movc	a,@a+dptr
+X0607:	mov	65h,a
+	mov	75h,a
+	mov	32h,#2
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#3
+	lcall	X1bbf
+	mov	a,79h
+	anl	a,#0f0h
+	swap	a
+	movc	a,@a+dptr
+X0622:	mov	65h,a
+	mov	75h,a
+	mov	32h,#4
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#5
+	lcall	X1bbf
+	mov	a,7ah
+	anl	a,#0fh
+	movc	a,@a+dptr
+X063c:	mov	65h,a
+	mov	75h,a
+	mov	32h,#6
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#7
+	lcall	X1bbf
+	mov	a,7ah
+	anl	a,#0f0h
+	swap	a
+	mov	75h,a
+	mov	a,74h
+	jb	acc.0,X066b
+	mov	a,75h
+	cjne	a,#0,X066b
+	mov	a,7bh
+	cjne	a,#0,X066b
+	mov	a,#0
+	sjmp	X066e
+;
+X066b:	mov	a,75h
+	movc	a,@a+dptr
+X066e:	mov	65h,a
+	mov	75h,a
+	mov	32h,#8
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#9
+	lcall	X1bbf
+	mov	a,7bh
+	anl	a,#0fh
+	mov	75h,a
+	mov	a,74h
+	jb	acc.0,X069c
+	mov	a,75h
+	cjne	a,#0,X069c
+	mov	a,7bh
+	cjne	a,#0,X069c
+	mov	a,#0
+	sjmp	X069f
+;
+X069c:	mov	a,75h
+	movc	a,@a+dptr
+X069f:	mov	65h,a
+	mov	75h,a
+	mov	32h,#0ah
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#0bh
+	lcall	X1bbf
+	mov	a,7bh
+	anl	a,#0f0h
+	swap	a
+	mov	75h,a
+	mov	a,74h
+	jb	acc.0,X06c9
+	mov	a,75h
+	cjne	a,#0,X06c9
+	mov	a,#0
+	sjmp	X06cc
+;
+X06c9:	mov	a,75h
+	movc	a,@a+dptr
+X06cc:	mov	65h,a
+	mov	75h,a
+	mov	32h,#0ch
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#0dh
+	lcall	X1bbf
+	mov	a,#13h
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	32h,#1
+	lcall	X1bbf
+	mov	a,#0ah
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	32h,#0
+	lcall	X1bbf
+	ljmp	X1481
+;
+X06fa:	mov	75h,53h
+	mov	76h,54h
+	mov	77h,#0
+	acall	X0204
+	mov	a,78h
+	anl	a,#0fh
+	mov	dptr,#X1c2a
+	movc	a,@a+dptr
+X070d:	mov	65h,a
+	mov	75h,a
+	mov	32h,#2
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#3
+	lcall	X1bbf
+	mov	a,78h
+	anl	a,#0f0h
+	swap	a
+	movc	a,@a+dptr
+X0728:	mov	65h,a
+	mov	75h,a
+	mov	32h,#4
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#5
+	lcall	X1bbf
+	mov	a,79h
+	anl	a,#0fh
+	movc	a,@a+dptr
+X0742:	mov	65h,a
+	mov	75h,a
+	mov	32h,#6
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#7
+	lcall	X1bbf
+	mov	a,79h
+	anl	a,#0f0h
+	swap	a
+	mov	75h,a
+	mov	a,74h
+	jb	acc.0,X076c
+	mov	a,75h
+	cjne	a,#0,X076c
+	mov	a,#0
+	sjmp	X076f
+;
+X076c:	mov	a,75h
+	movc	a,@a+dptr
+X076f:	mov	65h,a
+	mov	75h,a
+	mov	32h,#8
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#9
+	lcall	X1bbf
+	mov	65h,#0
+	mov	32h,#0ah
+	lcall	X1bbf
+	mov	32h,#0bh
+	lcall	X1bbf
+	mov	32h,#0ch
+	lcall	X1bbf
+	mov	32h,#0dh
+	lcall	X1bbf
+	mov	a,#13h
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	32h,#1
+	lcall	X1bbf
+	mov	a,#0bh
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	32h,#0
+	lcall	X1bbf
+	ljmp	X1481
+;
+X07b8:	mov	75h,50h
+	mov	76h,51h
+	mov	77h,52h
+	acall	X0204
+	mov	a,78h
+	anl	a,#0fh
+	mov	dptr,#X1c2a
+	movc	a,@a+dptr
+X07cb:	mov	65h,a
+	mov	75h,a
+	mov	32h,#2
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#3
+	lcall	X1bbf
+	mov	a,78h
+	anl	a,#0f0h
+	swap	a
+	movc	a,@a+dptr
+X07e6:	mov	65h,a
+	mov	75h,a
+	mov	32h,#4
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#5
+	lcall	X1bbf
+	mov	a,79h
+	anl	a,#0fh
+	movc	a,@a+dptr
+X0800:	mov	65h,a
+	mov	75h,a
+	mov	32h,#6
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#7
+	lcall	X1bbf
+	mov	a,79h
+	anl	a,#0f0h
+	swap	a
+	mov	75h,a
+	mov	a,74h
+	jb	acc.0,X082f
+	mov	a,75h
+	cjne	a,#0,X082f
+	mov	a,7ah
+	cjne	a,#0,X082f
+	mov	a,#0
+	sjmp	X0832
+;
+X082f:	mov	a,75h
+	movc	a,@a+dptr
+X0832:	mov	65h,a
+	mov	75h,a
+	mov	32h,#8
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#9
+	lcall	X1bbf
+	mov	a,7ah
+	anl	a,#0fh
+	mov	75h,a
+	mov	a,74h
+	jb	acc.0,X0860
+	mov	a,75h
+	cjne	a,#0,X0860
+	mov	a,7ah
+	cjne	a,#0,X0860
+	mov	a,#0
+	sjmp	X0863
+;
+X0860:	mov	a,75h
+	movc	a,@a+dptr
+X0863:	mov	65h,a
+	mov	75h,a
+	mov	32h,#0ah
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#0bh
+	lcall	X1bbf
+	mov	a,7ah
+	anl	a,#0f0h
+	swap	a
+	mov	75h,a
+	mov	a,74h
+	jb	acc.0,X088d
+	mov	a,75h
+	cjne	a,#0,X088d
+	mov	a,#0
+	sjmp	X0890
+;
+X088d:	mov	a,75h
+	movc	a,@a+dptr
+X0890:	mov	65h,a
+	mov	75h,a
+	mov	32h,#0ch
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#0dh
+	lcall	X1bbf
+	mov	a,#13h
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	32h,#1
+	lcall	X1bbf
+	mov	a,#12h
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	32h,#0
+	lcall	X1bbf
+	ljmp	X1481
+;
+X08be:	mov	75h,59h
+	mov	76h,5ah
+	mov	77h,#0
+	lcall	X0204
+	mov	a,78h
+	anl	a,#0fh
+	mov	dptr,#X1c2a
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	75h,a
+	mov	32h,#2
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#3
+	lcall	X1bbf
+	mov	a,78h
+	anl	a,#0f0h
+	swap	a
+	mov	75h,a
+	cjne	a,#0,X08fa
+	mov	a,79h
+	cjne	a,#0,X08fa
+	mov	a,#0
+	sjmp	X08fd
+;
+X08fa:	mov	a,75h
+	movc	a,@a+dptr
+X08fd:	mov	65h,a
+	mov	75h,a
+	mov	32h,#4
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#5
+	lcall	X1bbf
+	mov	a,79h
+	anl	a,#0fh
+	mov	75h,a
+	cjne	a,#0,X0924
+	mov	a,79h
+	cjne	a,#0,X0924
+	mov	a,#0
+	sjmp	X0927
+;
+X0924:	mov	a,75h
+	movc	a,@a+dptr
+X0927:	mov	65h,a
+	mov	75h,a
+	mov	32h,#6
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#7
+	lcall	X1bbf
+	mov	a,79h
+	anl	a,#0f0h
+	swap	a
+	cjne	a,#0,X0948
+	mov	a,#0
+	sjmp	X0949
+;
+X0948:	movc	a,@a+dptr
+X0949:	mov	65h,a
+	mov	75h,a
+	mov	32h,#8
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#9
+	lcall	X1bbf
+	mov	65h,#0
+	mov	32h,#0ah
+	lcall	X1bbf
+	mov	32h,#0bh
+	lcall	X1bbf
+	mov	32h,#0ch
+	lcall	X1bbf
+	mov	32h,#0dh
+	lcall	X1bbf
+	mov	a,79h
+	anl	a,#0f0h
+	jnz	X0983
+	mov	a,#0eh
+	sjmp	X0994
+;
+X0983:	swap	a
+	cjne	a,#1,X098b
+	mov	a,#15h
+	sjmp	X0994
+;
+X098b:	cjne	a,#2,X0992
+	mov	a,#17h
+	sjmp	X0994
+;
+X0992:	mov	a,#16h
+X0994:	movc	a,@a+dptr
+	mov	65h,a
+	mov	32h,#8
+	lcall	X1bbf
+	mov	65h,#0
+	mov	32h,#0
+	lcall	X1bbf
+	mov	32h,#1
+	lcall	X1bbf
+	ljmp	X1481
+;
+X09af:	mov	75h,5bh
+	mov	76h,5ch
+	mov	77h,#0
+	lcall	X0204
+	mov	a,78h
+	anl	a,#0fh
+	mov	dptr,#X1c2a
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	75h,a
+	mov	32h,#2
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#3
+	lcall	X1bbf
+	mov	a,78h
+	anl	a,#0f0h
+	swap	a
+	mov	75h,a
+	cjne	a,#0,X09eb
+	mov	a,79h
+	cjne	a,#0,X09eb
+	mov	a,#0
+	sjmp	X09ee
+;
+X09eb:	mov	a,75h
+	movc	a,@a+dptr
+X09ee:	mov	65h,a
+	mov	75h,a
+	mov	32h,#4
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#5
+	lcall	X1bbf
+	mov	a,79h
+	anl	a,#0fh
+	mov	75h,a
+	cjne	a,#0,X0a15
+	mov	a,79h
+	cjne	a,#0,X0a15
+	mov	a,#0
+	sjmp	X0a18
+;
+X0a15:	mov	a,75h
+	movc	a,@a+dptr
+X0a18:	mov	65h,a
+	mov	75h,a
+	mov	32h,#6
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#7
+	lcall	X1bbf
+	mov	a,79h
+	anl	a,#0f0h
+	swap	a
+	cjne	a,#0,X0a39
+	mov	a,#0
+	sjmp	X0a3a
+;
+X0a39:	movc	a,@a+dptr
+X0a3a:	mov	65h,a
+	mov	75h,a
+	mov	32h,#8
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#9
+	lcall	X1bbf
+	mov	65h,#0
+	mov	32h,#0ah
+	lcall	X1bbf
+	mov	32h,#0bh
+	lcall	X1bbf
+	mov	32h,#0ch
+	lcall	X1bbf
+	mov	32h,#0dh
+	lcall	X1bbf
+	mov	a,#10h
+	movc	a,@a+dptr
+	mov	65h,a
+	clr	c
+	mov	a,5bh
+	subb	a,#0ah
+	mov	a,5ch
+	subb	a,#0
+	jc	X0a84
+	mov	a,78h
+	anl	a,#0f0h
+	swap	a
+	movc	a,@a+dptr
+	orl	a,65h
+	mov	65h,a
+X0a84:	mov	32h,#4
+	lcall	X1bbf
+	mov	65h,#0
+	mov	32h,#0
+	lcall	X1bbf
+	mov	32h,#1
+	lcall	X1bbf
+	ljmp	X1481
+;
+X0a9c:	mov	75h,5dh
+	mov	76h,5eh
+	mov	77h,#0
+	lcall	X0204
+	mov	a,78h
+	anl	a,#0fh
+	mov	dptr,#X1c2a
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	75h,a
+	mov	32h,#2
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#3
+	lcall	X1bbf
+	mov	a,78h
+	anl	a,#0f0h
+	swap	a
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	75h,a
+	mov	32h,#4
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#5
+	lcall	X1bbf
+	mov	a,79h
+	anl	a,#0fh
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	75h,a
+	mov	32h,#6
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#7
+	lcall	X1bbf
+	mov	a,79h
+	anl	a,#0f0h
+	swap	a
+	mov	75h,a
+	cjne	a,#0,X0b0d
+	mov	a,7ah
+	cjne	a,#0,X0b0d
+	mov	a,#0
+	sjmp	X0b10
+;
+X0b0d:	mov	a,75h
+	movc	a,@a+dptr
+X0b10:	mov	65h,a
+	mov	75h,a
+	mov	32h,#8
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#9
+	lcall	X1bbf
+	mov	a,7ah
+	anl	a,#0fh
+	cjne	a,#0,X0b30
+	mov	a,#0
+	sjmp	X0b31
+;
+X0b30:	movc	a,@a+dptr
+X0b31:	mov	65h,a
+	mov	75h,a
+	mov	32h,#0ah
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#0bh
+	lcall	X1bbf
+	mov	65h,#0
+	mov	32h,#0ch
+	lcall	X1bbf
+	mov	32h,#0dh
+	lcall	X1bbf
+	mov	a,#13h
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	32h,#1
+	lcall	X1bbf
+	mov	a,#0ch
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	32h,#0ch
+	lcall	X1bbf
+	mov	65h,#0
+	mov	32h,#0
+	lcall	X1bbf
+	ljmp	X1481
+;
+X0b77:	mov	75h,5fh
+	mov	76h,60h
+	mov	77h,#0
+	lcall	X0204
+	mov	a,78h
+	anl	a,#0fh
+	mov	dptr,#X1c2a
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	75h,a
+	mov	32h,#2
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#3
+	lcall	X1bbf
+	mov	a,78h
+	anl	a,#0f0h
+	swap	a
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	75h,a
+	mov	32h,#4
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#5
+	lcall	X1bbf
+	mov	a,79h
+	anl	a,#0fh
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	75h,a
+	mov	32h,#6
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#7
+	lcall	X1bbf
+	mov	a,79h
+	anl	a,#0f0h
+	swap	a
+	cjne	a,#0,X0be1
+	mov	a,#0
+	sjmp	X0be2
+;
+X0be1:	movc	a,@a+dptr
+X0be2:	mov	65h,a
+	mov	75h,a
+	mov	32h,#8
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#9
+	lcall	X1bbf
+	mov	65h,#0
+	mov	32h,#0ah
+	lcall	X1bbf
+	mov	32h,#0bh
+	lcall	X1bbf
+	mov	32h,#0ch
+	lcall	X1bbf
+	mov	32h,#0dh
+	lcall	X1bbf
+	mov	a,#13h
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	32h,#1
+	lcall	X1bbf
+	mov	a,#0dh
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	32h,#0ah
+	lcall	X1bbf
+	mov	65h,#0
+	mov	32h,#0
+	lcall	X1bbf
+	ljmp	X1481
+;
+X0c34:	mov	75h,61h
+	mov	76h,62h
+	mov	77h,#0
+	lcall	X0204
+	mov	a,78h
+	anl	a,#0fh
+	mov	dptr,#X1c2a
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	75h,a
+	mov	32h,#2
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#3
+	lcall	X1bbf
+	mov	a,78h
+	anl	a,#0f0h
+	swap	a
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	75h,a
+	mov	32h,#4
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#5
+	lcall	X1bbf
+	mov	a,79h
+	anl	a,#0fh
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	75h,a
+	mov	32h,#6
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#7
+	lcall	X1bbf
+	mov	a,79h
+	anl	a,#0f0h
+	swap	a
+	cjne	a,#0,X0c9e
+	mov	a,#0
+	sjmp	X0c9f
+;
+X0c9e:	movc	a,@a+dptr
+X0c9f:	mov	65h,a
+	mov	75h,a
+	mov	32h,#8
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#9
+	lcall	X1bbf
+	mov	65h,#0
+	mov	32h,#0ah
+	lcall	X1bbf
+	mov	32h,#0bh
+	lcall	X1bbf
+	mov	32h,#0ch
+	lcall	X1bbf
+	mov	32h,#0dh
+	lcall	X1bbf
+	mov	a,#13h
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	32h,#1
+	lcall	X1bbf
+	mov	a,#0fh
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	a,79h
+	anl	a,#0fh
+	movc	a,@a+dptr
+	orl	a,65h
+	mov	65h,a
+	mov	32h,#6
+	lcall	X1bbf
+	mov	65h,#0
+	mov	32h,#0
+	lcall	X1bbf
+	ljmp	X1481
+;
+X0cfa:	mov	75h,63h
+	mov	76h,#0
+	mov	77h,#0
+	lcall	X0204
+	mov	a,78h
+	anl	a,#0fh
+	mov	dptr,#X1c2a
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	75h,a
+	mov	32h,#2
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#3
+	lcall	X1bbf
+	mov	a,78h
+	anl	a,#0f0h
+	swap	a
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	75h,a
+	mov	32h,#4
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#5
+	lcall	X1bbf
+	mov	a,79h
+	anl	a,#0fh
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	75h,a
+	mov	32h,#6
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#7
+	lcall	X1bbf
+	mov	65h,#0
+	mov	32h,#8
+	lcall	X1bbf
+	mov	32h,#9
+	lcall	X1bbf
+	mov	32h,#0ah
+	lcall	X1bbf
+	mov	32h,#0bh
+	lcall	X1bbf
+	mov	32h,#0ch
+	lcall	X1bbf
+	mov	32h,#0dh
+	lcall	X1bbf
+	mov	a,#13h
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	32h,#1
+	lcall	X1bbf
+	mov	a,#11h
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	a,78h
+	anl	a,#0fh
+	movc	a,@a+dptr
+	orl	a,65h
+	mov	65h,a
+	mov	32h,#2
+	lcall	X1bbf
+	mov	65h,#0
+	mov	32h,#0
+	lcall	X1bbf
+	ljmp	X1481
+;
+X0daa:	mov	a,6ch
+	inc	a
+	mov	6ch,a
+	mov	a,6ah
+	cjne	a,#1,X0db6
+	sjmp	X0db8
+;
+X0db6:	ajmp	X0f7e
+;
+X0db8:	mov	a,6bh
+	cjne	a,#1,X0de7
+	mov	a,6ch
+	cjne	a,#0ah,X0dc4
+	sjmp	X0dcb
+;
+X0dc4:	mov	a,74h
+	jb	acc.4,X0ddb
+	sjmp	X0de2
+;
+X0dcb:	mov	a,6ch
+	clr	a
+	mov	6ch,a
+	mov	a,74h
+	jb	acc.4,X0dde
+	sjmp	X0dd7
+;
+X0dd7:	setb	acc.4
+	mov	74h,a
+X0ddb:	ljmp	X06fa
+;
+X0dde:	clr	acc.4
+	mov	74h,a
+X0de2:	mov	a,#0
+	ljmp	X070d
+;
+X0de7:	mov	a,6bh
+	cjne	a,#2,X0e14
+	mov	a,6ch
+	cjne	a,#0ah,X0df3
+	sjmp	X0dfa
+;
+X0df3:	mov	a,74h
+	jb	acc.4,X0e08
+	sjmp	X0e0f
+;
+X0dfa:	clr	a
+	mov	6ch,a
+	mov	a,74h
+	jb	acc.4,X0e04
+	sjmp	X0e0b
+;
+X0e04:	clr	acc.4
+	mov	74h,a
+X0e08:	ljmp	X06fa
+;
+X0e0b:	setb	acc.4
+	mov	74h,a
+X0e0f:	mov	a,#0
+	ljmp	X0728
+;
+X0e14:	mov	a,6bh
+	cjne	a,#3,X0e41
+	mov	a,6ch
+	cjne	a,#0ah,X0e20
+	sjmp	X0e27
+;
+X0e20:	mov	a,74h
+	jb	acc.4,X0e35
+	sjmp	X0e3c
+;
+X0e27:	clr	a
+	mov	6ch,a
+	mov	a,74h
+	jb	acc.4,X0e04
+	sjmp	X0e0b
+;
+	clr	acc.4
+	mov	74h,a
+X0e35:	ljmp	X06fa
+;
+	setb	acc.4
+	mov	74h,a
+X0e3c:	mov	a,#0
+	ljmp	X0742
+;
+X0e41:	mov	a,6ch
+	cjne	a,#0ah,X0e48
+	sjmp	X0e4f
+;
+X0e48:	mov	a,74h
+	jb	acc.4,X0e5d
+	sjmp	X0e64
+;
+X0e4f:	clr	a
+	mov	6ch,a
+	mov	a,74h
+	jb	acc.4,X0e59
+	sjmp	X0e60
+;
+X0e59:	clr	acc.4
+	mov	74h,a
+X0e5d:	ljmp	X06fa
+;
+X0e60:	setb	acc.4
+	mov	74h,a
+X0e64:	mov	a,#0
+	ljmp	X076f
+;
+	mov	a,6bh
+	cjne	a,#1,X0e98
+	mov	a,6ch
+	cjne	a,#0ah,X0e75
+	sjmp	X0e7c
+;
+X0e75:	mov	a,74h
+	jb	acc.4,X0e8c
+	sjmp	X0e93
+;
+X0e7c:	mov	a,6ch
+	clr	a
+	mov	6ch,a
+	mov	a,74h
+	jb	acc.4,X0e8f
+	sjmp	X0e88
+;
+X0e88:	setb	acc.4
+	mov	74h,a
+X0e8c:	ljmp	X05e8
+;
+X0e8f:	clr	acc.4
+	mov	74h,a
+X0e93:	mov	a,#0
+	ljmp	X0607
+;
+X0e98:	mov	a,6bh
+	cjne	a,#2,X0ec7
+	mov	a,6ch
+	cjne	a,#0ah,X0ea4
+	sjmp	X0eab
+;
+X0ea4:	mov	a,74h
+	jb	acc.4,X0ebb
+	sjmp	X0ec2
+;
+X0eab:	mov	a,6ch
+	clr	a
+	mov	6ch,a
+	mov	a,74h
+	jb	acc.4,X0ebe
+	sjmp	X0eb7
+;
+X0eb7:	setb	acc.4
+	mov	74h,a
+X0ebb:	ljmp	X05e8
+;
+X0ebe:	clr	acc.4
+	mov	74h,a
+X0ec2:	mov	a,#0
+	ljmp	X0622
+;
+X0ec7:	mov	a,6bh
+	cjne	a,#3,X0ef6
+	mov	a,6ch
+	cjne	a,#0ah,X0ed3
+	sjmp	X0eda
+;
+X0ed3:	mov	a,74h
+	jb	acc.4,X0eea
+	sjmp	X0ef1
+;
+X0eda:	mov	a,6ch
+	clr	a
+	mov	6ch,a
+	mov	a,74h
+	jb	acc.4,X0eed
+	sjmp	X0ee6
+;
+X0ee6:	setb	acc.4
+	mov	74h,a
+X0eea:	ljmp	X05e8
+;
+X0eed:	clr	acc.4
+	mov	74h,a
+X0ef1:	mov	a,#0
+	ljmp	X063c
+;
+X0ef6:	mov	a,6bh
+	cjne	a,#4,X0f25
+	mov	a,6ch
+	cjne	a,#0ah,X0f02
+	sjmp	X0f09
+;
+X0f02:	mov	a,74h
+	jb	acc.4,X0f19
+	sjmp	X0f20
+;
+X0f09:	mov	a,6ch
+	clr	a
+	mov	6ch,a
+	mov	a,74h
+	jb	acc.4,X0f1c
+	sjmp	X0f15
+;
+X0f15:	setb	acc.4
+	mov	74h,a
+X0f19:	ljmp	X05e8
+;
+X0f1c:	clr	acc.4
+	mov	74h,a
+X0f20:	mov	a,#0
+	ljmp	X066e
+;
+X0f25:	mov	a,6bh
+	cjne	a,#5,X0f54
+	mov	a,6ch
+	cjne	a,#0ah,X0f31
+	sjmp	X0f38
+;
+X0f31:	mov	a,74h
+	jb	acc.4,X0f48
+	sjmp	X0f4f
+;
+X0f38:	mov	a,6ch
+	clr	a
+	mov	6ch,a
+	mov	a,74h
+	jb	acc.4,X0f4b
+	sjmp	X0f44
+;
+X0f44:	setb	acc.4
+	mov	74h,a
+X0f48:	ljmp	X05e8
+;
+X0f4b:	clr	acc.4
+	mov	74h,a
+X0f4f:	mov	a,#0
+	ljmp	X069f
+;
+X0f54:	mov	a,6ch
+	cjne	a,#0ah,X0f5b
+	sjmp	X0f62
+;
+X0f5b:	mov	a,74h
+	jb	acc.4,X0f72
+	sjmp	X0f79
+;
+X0f62:	mov	a,6ch
+	clr	a
+	mov	6ch,a
+	mov	a,74h
+	jb	acc.4,X0f75
+	sjmp	X0f6e
+;
+X0f6e:	setb	acc.4
+	mov	74h,a
+X0f72:	ljmp	X05e8
+;
+X0f75:	clr	acc.4
+	mov	74h,a
+X0f79:	mov	a,#0
+	ljmp	X06cc
+;
+X0f7e:	mov	a,6bh
+	cjne	a,#1,X0fad
+	mov	a,6ch
+	cjne	a,#0ah,X0f8a
+	sjmp	X0f91
+;
+X0f8a:	mov	a,74h
+	jb	acc.4,X0fa1
+	sjmp	X0fa8
+;
+X0f91:	mov	a,6ch
+	clr	a
+	mov	6ch,a
+	mov	a,74h
+	jb	acc.4,X0fa4
+	sjmp	X0f9d
+;
+X0f9d:	setb	acc.4
+	mov	74h,a
+X0fa1:	ljmp	X07b8
+;
+X0fa4:	clr	acc.4
+	mov	74h,a
+X0fa8:	mov	a,#0
+	ljmp	X07cb
+;
+X0fad:	mov	a,6bh
+	cjne	a,#2,X0fdc
+	mov	a,6ch
+	cjne	a,#0ah,X0fb9
+	sjmp	X0fc0
+;
+X0fb9:	mov	a,74h
+	jb	acc.4,X0fd0
+	sjmp	X0fd7
+;
+X0fc0:	mov	a,6ch
+	clr	a
+	mov	6ch,a
+	mov	a,74h
+	jb	acc.4,X0fd3
+	sjmp	X0fcc
+;
+X0fcc:	setb	acc.4
+	mov	74h,a
+X0fd0:	ljmp	X07b8
+;
+X0fd3:	clr	acc.4
+	mov	74h,a
+X0fd7:	mov	a,#0
+	ljmp	X07e6
+;
+X0fdc:	mov	a,6bh
+	cjne	a,#3,X100b
+	mov	a,6ch
+	cjne	a,#0ah,X0fe8
+	sjmp	X0fef
+;
+X0fe8:	mov	a,74h
+	jb	acc.4,X0fff
+	sjmp	X1006
+;
+X0fef:	mov	a,6ch
+	clr	a
+	mov	6ch,a
+	mov	a,74h
+	jb	acc.4,X1002
+	sjmp	X0ffb
+;
+X0ffb:	setb	acc.4
+	mov	74h,a
+X0fff:	ljmp	X07b8
+;
+X1002:	clr	acc.4
+	mov	74h,a
+X1006:	mov	a,#0
+	ljmp	X0800
+;
+X100b:	mov	a,6bh
+	cjne	a,#4,X103a
+	mov	a,6ch
+	cjne	a,#0ah,X1017
+	sjmp	X101e
+;
+X1017:	mov	a,74h
+	jb	acc.4,X102e
+	sjmp	X1035
+;
+X101e:	mov	a,6ch
+	clr	a
+	mov	6ch,a
+	mov	a,74h
+	jb	acc.4,X1031
+	sjmp	X102a
+;
+X102a:	setb	acc.4
+	mov	74h,a
+X102e:	ljmp	X07b8
+;
+X1031:	clr	acc.4
+	mov	74h,a
+X1035:	mov	a,#0
+	ljmp	X0832
+;
+X103a:	mov	a,6bh
+	cjne	a,#5,X1069
+	mov	a,6ch
+	cjne	a,#0ah,X1046
+	sjmp	X104d
+;
+X1046:	mov	a,74h
+	jb	acc.4,X105d
+	sjmp	X1064
+;
+X104d:	mov	a,6ch
+	clr	a
+	mov	6ch,a
+	mov	a,74h
+	jb	acc.4,X1060
+	sjmp	X1059
+;
+X1059:	setb	acc.4
+	mov	74h,a
+X105d:	ljmp	X07b8
+;
+X1060:	clr	acc.4
+	mov	74h,a
+X1064:	mov	a,#0
+	ljmp	X0863
+;
+X1069:	mov	a,6ch
+	cjne	a,#0ah,X1070
+	sjmp	X1077
+;
+X1070:	mov	a,74h
+	jb	acc.4,X1087
+	sjmp	X108e
+;
+X1077:	mov	a,6ch
+	clr	a
+	mov	6ch,a
+	mov	a,74h
+	jb	acc.4,X108a
+	sjmp	X1083
+;
+X1083:	setb	acc.4
+	mov	74h,a
+X1087:	ljmp	X07b8
+;
+X108a:	clr	acc.4
+	mov	74h,a
+X108e:	mov	a,#0
+	ljmp	X0890
+;
+X1093:	mov	a,6ch
+	inc	a
+	mov	6ch,a
+	mov	a,7fh
+	cjne	a,#1,X109f
+	sjmp	X10ab
+;
+X109f:	cjne	a,#2,X10a4
+	ajmp	X11a2
+;
+X10a4:	cjne	a,#3,X10a9
+	ajmp	X1276
+;
+X10a9:	ajmp	X1372
+;
+X10ab:	mov	a,34h
+	jnb	acc.7,X10b2
+	clr	acc.7
+X10b2:	mov	75h,33h
+	mov	76h,a
+	mov	77h,#0
+	lcall	X0204
+	mov	a,78h
+	anl	a,#0fh
+	mov	dptr,#X1c2a
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	75h,a
+	mov	32h,#2
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#3
+	lcall	X1bbf
+	mov	a,78h
+	anl	a,#0f0h
+	swap	a
+	mov	75h,a
+	cjne	a,#0,X10ed
+	mov	a,79h
+	cjne	a,#0,X10ed
+	mov	a,#0
+	sjmp	X10f0
+;
+X10ed:	mov	a,75h
+	movc	a,@a+dptr
+X10f0:	mov	65h,a
+	mov	75h,a
+	mov	32h,#4
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#5
+	lcall	X1bbf
+	mov	a,79h
+	anl	a,#0fh
+	mov	75h,a
+	cjne	a,#0,X1117
+	mov	a,79h
+	cjne	a,#0,X1117
+	mov	a,#0
+	sjmp	X111a
+;
+X1117:	mov	a,75h
+	movc	a,@a+dptr
+X111a:	mov	65h,a
+	mov	75h,a
+	mov	32h,#6
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#7
+	lcall	X1bbf
+	mov	65h,#0
+	mov	32h,#8
+	lcall	X1bbf
+	mov	32h,#9
+	lcall	X1bbf
+	mov	32h,#0ah
+	lcall	X1bbf
+	mov	32h,#0bh
+	lcall	X1bbf
+	mov	32h,#0ch
+	lcall	X1bbf
+	mov	32h,#0dh
+	lcall	X1bbf
+	mov	a,6ch
+	cjne	a,#0ah,X1164
+	mov	6ch,#0
+	mov	a,74h
+	cpl	acc.4
+	mov	74h,a
+X1164:	mov	a,74h
+	jnb	acc.4,X1174
+	mov	a,#0ch
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	32h,#0ch
+	lcall	X1bbf
+X1174:	mov	a,34h
+	jnb	acc.7,X1191
+	mov	a,#18h
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	75h,a
+	mov	32h,#8
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#9
+	lcall	X1bbf
+X1191:	mov	65h,#0
+	mov	32h,#0
+	lcall	X1bbf
+	mov	32h,#1
+	lcall	X1bbf
+	ajmp	X1481
+;
+X11a2:	mov	a,35h
+	jnb	acc.7,X11a9
+	clr	acc.7
+X11a9:	mov	75h,a
+	mov	76h,#0
+	mov	77h,#0
+	lcall	X0204
+	mov	a,78h
+	anl	a,#0fh
+	mov	dptr,#X1c2a
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	75h,a
+	mov	32h,#2
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#3
+	lcall	X1bbf
+	mov	a,78h
+	anl	a,#0f0h
+	swap	a
+	mov	75h,a
+	cjne	a,#0,X11df
+	mov	a,#0
+	sjmp	X11e2
+;
+X11df:	mov	a,75h
+	movc	a,@a+dptr
+X11e2:	mov	65h,a
+	mov	75h,a
+	mov	32h,#4
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#5
+	lcall	X1bbf
+	mov	65h,#0
+	mov	32h,#6
+	lcall	X1bbf
+	mov	32h,#7
+	lcall	X1bbf
+	mov	32h,#8
+	lcall	X1bbf
+	mov	32h,#9
+	lcall	X1bbf
+	mov	32h,#0ah
+	lcall	X1bbf
+	mov	32h,#0bh
+	lcall	X1bbf
+	mov	32h,#0ch
+	lcall	X1bbf
+	mov	32h,#0dh
+	lcall	X1bbf
+	mov	a,6ch
+	cjne	a,#0ah,X1238
+	mov	6ch,#0
+	mov	a,74h
+	cpl	acc.4
+	mov	74h,a
+X1238:	mov	a,74h
+	jnb	acc.4,X1248
+	mov	a,#0dh
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	32h,#0ah
+	lcall	X1bbf
+X1248:	mov	a,35h
+	jnb	acc.7,X1265
+	mov	a,#18h
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	75h,a
+	mov	32h,#6
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#7
+	lcall	X1bbf
+X1265:	mov	65h,#0
+	mov	32h,#0
+	lcall	X1bbf
+	mov	32h,#1
+	lcall	X1bbf
+	ajmp	X1481
+;
+X1276:	mov	a,37h
+	jnb	acc.7,X127d
+	clr	acc.7
+X127d:	mov	75h,36h
+	mov	76h,a
+	mov	77h,#0
+	lcall	X0204
+	mov	a,78h
+	anl	a,#0fh
+	mov	dptr,#X1c2a
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	75h,a
+	mov	32h,#2
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#3
+	lcall	X1bbf
+	mov	a,78h
+	anl	a,#0f0h
+	swap	a
+	mov	75h,a
+	cjne	a,#0,X12b8
+	mov	a,79h
+	cjne	a,#0,X12b8
+	mov	a,#0
+	sjmp	X12bb
+;
+X12b8:	mov	a,75h
+	movc	a,@a+dptr
+X12bb:	mov	65h,a
+	mov	75h,a
+	mov	32h,#4
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#5
+	lcall	X1bbf
+	mov	a,79h
+	anl	a,#0fh
+	mov	75h,a
+	cjne	a,#0,X12e2
+	mov	a,79h
+	cjne	a,#0,X12e2
+	mov	a,#0
+	sjmp	X12e5
+;
+X12e2:	mov	a,75h
+	movc	a,@a+dptr
+X12e5:	mov	65h,a
+	mov	75h,a
+	mov	32h,#6
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#7
+	lcall	X1bbf
+	mov	65h,#0
+	mov	32h,#8
+	lcall	X1bbf
+	mov	32h,#9
+	lcall	X1bbf
+	mov	32h,#0ah
+	lcall	X1bbf
+	mov	32h,#0bh
+	lcall	X1bbf
+	mov	32h,#0ch
+	lcall	X1bbf
+	mov	32h,#0dh
+	lcall	X1bbf
+	mov	a,6ch
+	cjne	a,#0ah,X132f
+	mov	6ch,#0
+	mov	a,74h
+	cpl	acc.4
+	mov	74h,a
+X132f:	mov	a,74h
+	jnb	acc.4,X1341
+	mov	a,#12h
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	32h,#0
+	lcall	X1bbf
+	sjmp	X134a
+;
+X1341:	mov	65h,#0
+	mov	32h,#0
+	lcall	X1bbf
+X134a:	mov	a,37h
+	jnb	acc.7,X1367
+	mov	a,#18h
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	75h,a
+	mov	32h,#8
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#9
+	lcall	X1bbf
+X1367:	mov	65h,#0
+	mov	32h,#1
+	lcall	X1bbf
+	ajmp	X1481
+;
+X1372:	mov	a,6eh
+	jnb	acc.7,X1379
+	clr	acc.7
+X1379:	mov	75h,6dh
+	mov	76h,a
+	mov	77h,#0
+	lcall	X0204
+	mov	a,78h
+	anl	a,#0fh
+	mov	dptr,#X1c2a
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	75h,a
+	mov	32h,#2
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#3
+	lcall	X1bbf
+	mov	a,78h
+	anl	a,#0f0h
+	swap	a
+	mov	75h,a
+	cjne	a,#0,X13b4
+	mov	a,79h
+	cjne	a,#0,X13b4
+	mov	a,#0
+	sjmp	X13b7
+;
+X13b4:	mov	a,75h
+	movc	a,@a+dptr
+X13b7:	mov	65h,a
+	mov	75h,a
+	mov	32h,#4
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#5
+	lcall	X1bbf
+	mov	a,79h
+	anl	a,#0fh
+	mov	75h,a
+	cjne	a,#0,X13de
+	mov	a,79h
+	cjne	a,#0,X13de
+	mov	a,#0
+	sjmp	X13e1
+;
+X13de:	mov	a,75h
+	movc	a,@a+dptr
+X13e1:	mov	65h,a
+	mov	75h,a
+	mov	32h,#6
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#7
+	lcall	X1bbf
+	mov	a,79h
+	anl	a,#0f0h
+	swap	a
+	cjne	a,#0,X1402
+	mov	a,#0
+	sjmp	X1403
+;
+X1402:	movc	a,@a+dptr
+X1403:	mov	65h,a
+	mov	75h,a
+	mov	32h,#8
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#9
+	lcall	X1bbf
+	mov	65h,#0
+	mov	32h,#0ah
+	lcall	X1bbf
+	mov	32h,#0bh
+	lcall	X1bbf
+	mov	32h,#0ch
+	lcall	X1bbf
+	mov	32h,#0dh
+	lcall	X1bbf
+	mov	a,6ch
+	cjne	a,#0ah,X1441
+	mov	6ch,#0
+	mov	a,74h
+	cpl	acc.4
+	mov	74h,a
+X1441:	mov	a,74h
+	jnb	acc.4,X1453
+	mov	a,#0eh
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	32h,#8
+	lcall	X1bbf
+	sjmp	X1453
+;
+X1453:	mov	a,6eh
+	jnb	acc.7,X1470
+	mov	a,#18h
+	movc	a,@a+dptr
+	mov	65h,a
+	mov	75h,a
+	mov	32h,#0ah
+	lcall	X1bbf
+	mov	a,75h
+	swap	a
+	mov	65h,a
+	mov	32h,#0bh
+	lcall	X1bbf
+X1470:	mov	65h,#0
+	mov	32h,#0
+	lcall	X1bbf
+	mov	32h,#1
+	lcall	X1bbf
+	sjmp	X1481
+;
+X1481:	mov	th0,#63h
+	mov	tl0,#0c0h
+	setb	et0
+	setb	tr0
+	pop	rb0r7
+	pop	rb0r6
+	pop	rb0r5
+	pop	rb0r4
+	pop	rb0r3
+	pop	rb0r2
+	pop	rb0r1
+	pop	rb0r0
+	pop	psw
+	pop	acc
+	reti	
+;
+	push	acc
+	push	psw
+	push	rb0r0
+	push	rb0r1
+	push	rb0r2
+	push	rb0r3
+	push	rb0r4
+	push	rb0r5
+	push	rb0r6
+	push	rb0r7
+	clr	ie1
+	clr	ex1
+	mov	r0,#50h
+	mov	72h,#1
+	mov	73h,#3
+	lcall	X1d0f
+	setb	ex1
+	pop	rb0r7
+	pop	rb0r6
+	pop	rb0r5
+	pop	rb0r4
+	pop	rb0r3
+	pop	rb0r2
+	pop	rb0r1
+	pop	rb0r0
+	pop	psw
+	pop	acc
+	reti	
+;
+X14da:	mov	th1,#63h
+	mov	tl1,#0c0h
+	setb	et1
+	setb	tr1
+	pop	rb0r7
+	pop	rb0r6
+	pop	rb0r5
+	pop	rb0r4
+	pop	rb0r3
+	pop	rb0r2
+	pop	rb0r1
+	pop	rb0r0
+	pop	psw
+	pop	acc
+	reti	
+;
+	push	acc
+	push	psw
+	push	rb0r0
+	push	rb0r1
+	push	rb0r2
+	push	rb0r3
+	push	rb0r4
+	push	rb0r5
+	push	rb0r6
+	push	rb0r7
+	clr	tf1
+	clr	tr1
+	clr	et1
+	mov	a,74h
+	jb	acc.1,X1542
+	jb	acc.0,X1534
+	jb	p1.3,X1534
+	lcall	X1d83
+	jb	p1.3,X1534
+X1524:	jnb	p1.3,X1524
+	inc	7dh
+	mov	a,7dh
+	cjne	a,#5,X1534
+	mov	7dh,#0
+	ljmp	X185c
+;
+X1534:	jb	p1.0,X1545
+	lcall	X1d83
+	jb	p1.0,X1545
+X153d:	jnb	p1.0,X153d
+	sjmp	X1571
+;
+X1542:	ljmp	X185c
+;
+X1545:	jb	p1.1,X1553
+	lcall	X1d83
+	jb	p1.1,X1553
+X154e:	jnb	p1.1,X154e
+	sjmp	X1595
+;
+X1553:	jb	p1.2,X1561
+	lcall	X1d83
+	jb	p1.2,X1561
+X155c:	jnb	p1.2,X155c
+	sjmp	X15ba
+;
+X1561:	jb	p1.3,X156f
+	lcall	X1d83
+	jb	p1.3,X156f
+X156a:	jnb	p1.3,X156a
+	sjmp	X15e0
+;
+X156f:	ajmp	X14da
+;
+X1571:	mov	a,74h
+	jb	acc.0,X1578
+	sjmp	X1587
+;
+X1578:	clr	acc.0
+	mov	74h,a
+	mov	r0,#50h
+	mov	72h,#1
+	mov	73h,#5
+	lcall	X1d0f
+X1587:	mov	a,69h
+	cjne	a,#9,X1591
+	mov	69h,#1
+	ajmp	X14da
+;
+X1591:	inc	69h
+	ajmp	X14da
+;
+X1595:	mov	a,74h
+	jb	acc.0,X15a6
+	setb	acc.0
+	mov	74h,a
+	mov	6ah,#1
+	mov	6bh,#1
+	ajmp	X14da
+;
+X15a6:	inc	6ah
+	mov	a,6ah
+	cjne	a,#3,X15b5
+	mov	6ah,#1
+	mov	6bh,#1
+	ajmp	X14da
+;
+X15b5:	mov	6bh,#1
+	ajmp	X14da
+;
+X15ba:	mov	a,74h
+	jnb	acc.0,X15c1
+	sjmp	X15c3
+;
+X15c1:	ajmp	X14da
+;
+X15c3:	mov	a,6ah
+	cjne	a,#1,X15d4
+	inc	6bh
+	mov	a,6bh
+	cjne	a,#5,X15d2
+	mov	6bh,#1
+X15d2:	ajmp	X14da
+;
+X15d4:	inc	6bh
+	mov	a,6bh
+	cjne	a,#7,X15d2
+	mov	6bh,#1
+	ajmp	X14da
+;
+X15e0:	mov	a,74h
+	jnb	acc.0,X1603
+	mov	a,6bh
+	cjne	a,#1,X15ec
+	sjmp	X1605
+;
+X15ec:	cjne	a,#2,X15f1
+	sjmp	X1670
+;
+X15f1:	cjne	a,#3,X15f6
+	ajmp	X16e7
+;
+X15f6:	cjne	a,#4,X15fb
+	ajmp	X1759
+;
+X15fb:	cjne	a,#5,X1600
+	ajmp	X17cf
+;
+X1600:	ljmp	X1814
+;
+X1603:	ajmp	X14da
+;
+X1605:	mov	a,6ah
+	cjne	a,#1,X1637
+	mov	75h,53h
+	mov	76h,54h
+	mov	77h,#0
+	lcall	X0204
+	mov	a,78h
+	anl	a,#0fh
+	cjne	a,#9,X162c
+	mov	a,53h
+	clr	c
+	subb	a,#9
+	mov	53h,a
+	mov	a,54h
+	subb	a,#0
+	mov	54h,a
+	ajmp	X14da
+;
+X162c:	clr	c
+	inc	53h
+	mov	a,54h
+	addc	a,#0
+	mov	54h,a
+	ajmp	X14da
+;
+X1637:	mov	75h,50h
+	mov	76h,51h
+	mov	77h,52h
+	lcall	X0204
+	mov	a,78h
+	anl	a,#0fh
+	cjne	a,#9,X165f
+	mov	a,50h
+	clr	c
+	subb	a,#9
+	mov	50h,a
+	mov	a,51h
+	subb	a,#0
+	mov	51h,a
+	mov	a,52h
+	subb	a,#0
+	mov	52h,a
+	ajmp	X14da
+;
+X165f:	clr	c
+	inc	50h
+	mov	a,51h
+	addc	a,#0
+	mov	51h,a
+	mov	a,52h
+	addc	a,#0
+	mov	52h,a
+	ajmp	X14da
+;
+X1670:	mov	a,6ah
+	cjne	a,#1,X16a8
+	mov	75h,53h
+	mov	76h,54h
+	mov	77h,#0
+	lcall	X0204
+	clr	c
+	mov	a,78h
+	anl	a,#0f0h
+	swap	a
+	cjne	a,#9,X1699
+	mov	a,53h
+	clr	c
+	subb	a,#5ah
+	mov	53h,a
+	mov	a,54h
+	subb	a,#0
+	mov	54h,a
+	ajmp	X14da
+;
+X1699:	clr	c
+	mov	a,53h
+	add	a,#0ah
+	mov	53h,a
+	mov	a,54h
+	addc	a,#0
+	mov	54h,a
+	ajmp	X14da
+;
+X16a8:	mov	75h,50h
+	mov	76h,51h
+	mov	77h,52h
+	lcall	X0204
+	clr	c
+	mov	a,78h
+	anl	a,#0f0h
+	swap	a
+	cjne	a,#9,X16d2
+	mov	a,50h
+	clr	c
+	subb	a,#5ah
+	mov	50h,a
+	mov	a,51h
+	subb	a,#0
+	mov	51h,a
+	mov	a,52h
+	subb	a,#0
+	mov	52h,a
+	ajmp	X14da
+;
+X16d2:	mov	a,50h
+	clr	c
+	add	a,#0ah
+	mov	50h,a
+	mov	a,51h
+	addc	a,#0
+	mov	51h,a
+	mov	a,52h
+	addc	a,#0
+	mov	52h,a
+	ajmp	X14da
+;
+X16e7:	mov	a,6ah
+	cjne	a,#1,X171c
+	mov	75h,53h
+	mov	76h,54h
+	mov	77h,#0
+	lcall	X0204
+	mov	a,79h
+	anl	a,#0fh
+	cjne	a,#9,X170e
+	clr	c
+	mov	a,53h
+	subb	a,#84h
+	mov	53h,a
+	mov	a,54h
+	subb	a,#3
+	mov	54h,a
+	ajmp	X14da
+;
+X170e:	mov	a,53h
+	clr	c
+	add	a,#64h
+	mov	53h,a
+	clr	a
+	addc	a,54h
+	mov	54h,a
+	ajmp	X14da
+;
+X171c:	mov	75h,50h
+	mov	76h,51h
+	mov	77h,52h
+	lcall	X0204
+	mov	a,79h
+	anl	a,#0fh
+	cjne	a,#9,X1744
+	clr	c
+	mov	a,50h
+	subb	a,#84h
+	mov	50h,a
+	mov	a,51h
+	subb	a,#3
+	mov	51h,a
+	mov	a,52h
+	subb	a,#0
+	mov	52h,a
+	ajmp	X14da
+;
+X1744:	mov	a,50h
+	clr	c
+	add	a,#64h
+	mov	50h,a
+	mov	a,51h
+	addc	a,#0
+	mov	51h,a
+	mov	a,52h
+	addc	a,#0
+	mov	52h,a
+	ajmp	X14da
+;
+X1759:	mov	a,6ah
+	cjne	a,#1,X1790
+	mov	75h,53h
+	mov	76h,54h
+	mov	77h,#0
+	lcall	X0204
+	mov	a,79h
+	anl	a,#0f0h
+	swap	a
+	cjne	a,#9,X1781
+	clr	c
+	mov	a,53h
+	subb	a,#28h
+	mov	53h,a
+	mov	a,54h
+	subb	a,#23h
+	mov	54h,a
+	ajmp	X14da
+;
+X1781:	mov	a,53h
+	clr	c
+	add	a,#0e8h
+	mov	53h,a
+	mov	a,54h
+	addc	a,#3
+	mov	54h,a
+	ajmp	X14da
+;
+X1790:	mov	75h,50h
+	mov	76h,51h
+	mov	77h,52h
+	lcall	X0204
+	clr	c
+	mov	a,79h
+	anl	a,#0f0h
+	swap	a
+	cjne	a,#9,X17ba
+	mov	a,50h
+	clr	c
+	subb	a,#28h
+	mov	50h,a
+	mov	a,51h
+	subb	a,#23h
+	mov	51h,a
+	mov	a,52h
+	subb	a,#0
+	mov	52h,a
+	ajmp	X14da
+;
+X17ba:	mov	a,50h
+	clr	c
+	add	a,#0e8h
+	mov	50h,a
+	mov	a,51h
+	addc	a,#3
+	mov	51h,a
+	mov	a,52h
+	addc	a,#0
+	mov	52h,a
+	ajmp	X14da
+;
+X17cf:	mov	a,6ah
+	cjne	a,#1,X17d6
+	ajmp	X14da
+;
+X17d6:	mov	75h,50h
+	mov	76h,51h
+	mov	77h,52h
+	lcall	X0204
+	mov	a,7ah
+	anl	a,#0fh
+	cjne	a,#9,X17fe
+	clr	c
+	mov	a,50h
+	subb	a,#90h
+	mov	50h,a
+	mov	a,51h
+	subb	a,#5fh
+	mov	51h,a
+	mov	a,52h
+	subb	a,#1
+	mov	52h,a
+	ajmp	X14da
+;
+X17fe:	mov	a,50h
+	clr	c
+	add	a,#10h
+	mov	50h,a
+	mov	a,51h
+	addc	a,#27h
+	mov	51h,a
+	mov	a,52h
+	addc	a,#0
+	mov	52h,a
+	ljmp	X14da
+;
+X1814:	mov	a,6ah
+	cjne	a,#1,X181c
+	ljmp	X14da
+;
+X181c:	mov	75h,50h
+	mov	76h,51h
+	mov	77h,52h
+	lcall	X0204
+	mov	a,7ah
+	anl	a,#0f0h
+	swap	a
+	cjne	a,#9,X1846
+	clr	c
+	mov	a,50h
+	subb	a,#0a0h
+	mov	50h,a
+	mov	a,51h
+	subb	a,#0bbh
+	mov	51h,a
+	mov	a,52h
+	subb	a,#0dh
+	mov	52h,a
+	ljmp	X14da
+;
+X1846:	mov	a,50h
+	clr	c
+	add	a,#0a0h
+	mov	50h,a
+	mov	a,51h
+	addc	a,#86h
+	mov	51h,a
+	mov	a,52h
+	addc	a,#1
+	mov	52h,a
+	ljmp	X14da
+;
+X185c:	mov	a,74h
+	jb	acc.1,X186b
+	setb	acc.1
+	mov	74h,a
+	mov	7fh,#1
+	ljmp	X14da
+;
+X186b:	jb	p1.0,X18c9
+	acall	X1d83
+	jb	p1.0,X18c9
+X1873:	jnb	p1.0,X1873
+	mov	a,74h
+	clr	acc.1
+	mov	74h,a
+	mov	7fh,#1
+	clr	ea
+	mov	r0,#33h
+	mov	72h,#6
+	mov	73h,#5
+	acall	X1d0f
+	mov	72h,#0bh
+	mov	r0,#6dh
+	mov	73h,#2
+	acall	X1d0f
+	setb	ea
+	mov	a,37h
+	jnb	acc.7,X18b1
+	clr	c
+	mov	a,#75h
+	subb	a,36h
+	mov	3dh,a
+	mov	a,37h
+	cpl	acc.7
+	mov	3eh,a
+	mov	a,#8
+	subb	a,3eh
+	mov	3eh,a
+	sjmp	X18bd
+;
+X18b1:	mov	a,#75h
+	add	a,36h
+	mov	3dh,a
+	mov	a,#8
+	addc	a,37h
+	mov	3eh,a
+X18bd:	mov	r0,#3eh
+	mov	a,#95h
+	mov	48h,#2
+	acall	X1ad5
+	ljmp	X14da
+;
+X18c9:	jb	p1.1,X18e4
+	acall	X1d83
+	jb	p1.1,X18e4
+X18d1:	jnb	p1.1,X18d1
+	mov	a,7fh
+	cjne	a,#4,X18df
+	mov	7fh,#1
+	ljmp	X14da
+;
+X18df:	inc	7fh
+	ljmp	X14da
+;
+X18e4:	jb	p1.3,X1906
+	acall	X1d83
+	jb	p1.3,X1906
+X18ec:	jnb	p1.3,X18ec
+	mov	a,7fh
+	cjne	a,#1,X1936
+	mov	a,34h
+	jb	acc.7,X1916
+	mov	a,33h
+	cjne	a,#90h,X1908
+	mov	a,34h
+	cjne	a,#1,X1908
+	ljmp	X14da
+;
+X1906:	ajmp	X19da
+;
+X1908:	mov	a,33h
+	add	a,#5
+	mov	33h,a
+	clr	a
+	addc	a,34h
+	mov	34h,a
+	ljmp	X14da
+;
+X1916:	clr	c
+	mov	a,33h
+	subb	a,#5
+	mov	33h,a
+	mov	a,34h
+	subb	a,#0
+	mov	34h,a
+	clr	acc.7
+	cjne	a,#0,X1933
+	mov	a,33h
+	cjne	a,#0,X1933
+	mov	a,34h
+	clr	acc.7
+	mov	34h,a
+X1933:	ljmp	X14da
+;
+X1936:	cjne	a,#2,X1957
+	mov	a,35h
+	jb	acc.7,X1949
+	cjne	a,#28h,X1944
+	ljmp	X14da
+;
+X1944:	inc	35h
+	ljmp	X14da
+;
+X1949:	dec	35h
+	mov	a,35h
+	clr	acc.7
+	cjne	a,#0,X1933
+	mov	35h,a
+	ljmp	X14da
+;
+X1957:	cjne	a,#3,X199a
+	mov	a,37h
+	jb	acc.7,X197a
+	mov	a,36h
+	cjne	a,#0deh,X196c
+	mov	a,37h
+	cjne	a,#3,X196c
+	ljmp	X14da
+;
+X196c:	mov	a,36h
+	add	a,#5
+	mov	36h,a
+	clr	a
+	addc	a,37h
+	mov	37h,a
+	ljmp	X14da
+;
+X197a:	clr	c
+	mov	a,36h
+	subb	a,#5
+	mov	36h,a
+	mov	a,37h
+	subb	a,#0
+	mov	37h,a
+	clr	acc.7
+	cjne	a,#0,X1933
+	mov	a,36h
+	cjne	a,#0,X1933
+	mov	a,37h
+	clr	acc.7
+	mov	37h,a
+	ljmp	X14da
+;
+X199a:	mov	a,6eh
+	jb	acc.7,X19ba
+	mov	a,6dh
+	cjne	a,#0d0h,X19ac
+	mov	a,6eh
+	cjne	a,#7,X19ac
+	ljmp	X14da
+;
+X19ac:	mov	a,6dh
+	add	a,#28h
+	mov	6dh,a
+	clr	a
+	addc	a,6eh
+	mov	6eh,a
+	ljmp	X14da
+;
+X19ba:	clr	c
+	mov	a,6dh
+	subb	a,#28h
+	mov	6dh,a
+	mov	a,6eh
+	subb	a,#0
+	mov	6eh,a
+	clr	acc.7
+	cjne	a,#0,X19d7
+	mov	a,6dh
+	cjne	a,#0,X19d7
+	mov	a,6eh
+	clr	acc.7
+	mov	6eh,a
+X19d7:	ljmp	X14da
+;
+X19da:	jb	p1.2,X19d7
+	acall	X1d83
+	jb	p1.2,X19d7
+X19e2:	jnb	p1.2,X19e2
+	mov	a,7fh
+	cjne	a,#1,X1a2b
+	mov	a,34h
+	jb	acc.7,X1a0f
+	mov	a,33h
+	cjne	a,#0,X19ff
+	mov	a,34h
+	cjne	a,#0,X19ff
+	setb	acc.7
+	mov	34h,a
+	sjmp	X1a0f
+;
+X19ff:	clr	c
+	mov	a,33h
+	subb	a,#5
+	mov	33h,a
+	mov	a,34h
+	subb	a,#0
+	mov	34h,a
+	ljmp	X14da
+;
+X1a0f:	mov	a,33h
+	cjne	a,#90h,X1a1c
+	mov	a,34h
+	cjne	a,#81h,X1a1c
+	ljmp	X14da
+;
+X1a1c:	mov	a,33h
+	add	a,#5
+	mov	33h,a
+	mov	a,34h
+	addc	a,#0
+	mov	34h,a
+	ljmp	X14da
+;
+X1a2b:	cjne	a,#2,X1a50
+	mov	a,35h
+	jb	acc.7,X1a43
+	cjne	a,#0,X1a3e
+	mov	a,35h
+	setb	acc.7
+	mov	35h,a
+	sjmp	X1a43
+;
+X1a3e:	dec	35h
+	ljmp	X14da
+;
+X1a43:	mov	a,35h
+	cjne	a,#0a8h,X1a4b
+	ljmp	X14da
+;
+X1a4b:	inc	35h
+	ljmp	X14da
+;
+X1a50:	cjne	a,#3,X1a94
+	mov	a,37h
+	jb	acc.7,X1a78
+	mov	a,36h
+	cjne	a,#0,X1a68
+	mov	a,37h
+	cjne	a,#0,X1a68
+	setb	acc.7
+	mov	37h,a
+	sjmp	X1a78
+;
+X1a68:	clr	c
+	mov	a,36h
+	subb	a,#5
+	mov	36h,a
+	mov	a,37h
+	subb	a,#0
+	mov	37h,a
+	ljmp	X14da
+;
+X1a78:	mov	a,36h
+	cjne	a,#0deh,X1a85
+	mov	a,37h
+	cjne	a,#83h,X1a85
+	ljmp	X14da
+;
+X1a85:	mov	a,36h
+	add	a,#5
+	mov	36h,a
+	mov	a,37h
+	addc	a,#0
+	mov	37h,a
+	ljmp	X14da
+;
+X1a94:	mov	a,6eh
+	jb	acc.7,X1ab9
+	mov	a,6dh
+	cjne	a,#0,X1aa9
+	mov	a,6eh
+	cjne	a,#0,X1aa9
+	setb	acc.7
+	mov	6eh,a
+	sjmp	X1ab9
+;
+X1aa9:	clr	c
+	mov	a,6dh
+	subb	a,#28h
+	mov	6dh,a
+	mov	a,6eh
+	subb	a,#0
+	mov	6eh,a
+	ljmp	X14da
+;
+X1ab9:	mov	a,6dh
+	cjne	a,#0d0h,X1ac6
+	mov	a,6eh
+	cjne	a,#87h,X1ac6
+	ljmp	X14da
+;
+X1ac6:	mov	a,6dh
+	add	a,#28h
+	mov	6dh,a
+	mov	a,6eh
+	addc	a,#0
+	mov	6eh,a
+	ljmp	X14da
+;
+X1ad5:	setb	p0.2
+	nop	
+;
+	org	1adbh
+;
+	clr	p0.3
+	mov	49h,#8
+X1ae0:	nop	
+;
+	org	1ae4h
+;
+	rlc	a
+	mov	p0.0,c
+	clr	p0.2
+	nop	
+;
+	org	1aedh
+;
+	setb	p0.2
+	djnz	49h,X1ae0
+	nop	
+;
+	org	1b00h
+;
+	mov	a,@r0
+	mov	49h,#8
+X1b04:	nop	
+;
+	org	1b09h
+;
+	rlc	a
+	mov	p0.0,c
+	clr	p0.2
+	nop	
+;
+	org	1b14h
+;
+	setb	p0.2
+	djnz	49h,X1b04
+	nop	
+;
+	org	1b27h
+;
+	dec	r0
+	mov	a,@r0
+	mov	49h,#8
+	djnz	48h,X1b04
+	setb	p0.3
+	ret	
+;
+X1b32:	setb	p0.2
+	nop	
+;
+	org	1b38h
+;
+	clr	p0.3
+	mov	49h,#8
+X1b3d:	nop	
+;
+	org	1b41h
+;
+	rlc	a
+	mov	p0.0,c
+	clr	p0.2
+	djnz	49h,X1b4b
+	sjmp	X1b53
+;
+X1b4b:	nop	
+;
+	org	1b4fh
+;
+	setb	p0.2
+	sjmp	X1b3d
+;
+X1b53:	nop	
+;
+	org	1b58h
+;
+	mov	49h,#8
+X1b5b:	setb	p0.2
+	mov	c,p0.1
+	rlc	a
+	nop	
+;
+	org	1b62h
+;
+	clr	p0.2
+	nop	
+;
+	org	1b6bh
+;
+	djnz	49h,X1b5b
+	nop	
+;
+	org	1b7bh
+;
+	mov	@r0,a
+	clr	a
+	dec	r0
+	mov	49h,#8
+	djnz	48h,X1b5b
+	setb	p0.3
+	ret	
+;
+X1b87:	clr	p0.5
+	clr	p0.7
+	setb	p0.7
+	clr	p0.6
+	acall	X1d74
+	setb	p0.6
+	nop	
+	clr	p0.7
+	clr	p0.6
+	acall	X1d74
+	setb	p0.6
+	nop	
+	clr	p0.6
+	acall	X1d74
+	setb	p0.6
+	mov	66h,#8
+	mov	a,64h
+	clr	c
+X1ba9:	rlc	a
+	mov	p0.7,c
+	clr	p0.6
+	acall	X1d74
+	setb	p0.6
+	djnz	66h,X1ba9
+	clr	p0.6
+	acall	X1d74
+	setb	p0.6
+	nop	
+	setb	p0.5
+	ret	
+;
+X1bbf:	clr	p0.5
+	setb	p0.7
+	clr	p0.6
+	acall	X1d74
+	setb	p0.6
+	clr	p0.7
+	clr	p0.6
+	acall	X1d74
+	setb	p0.6
+	setb	p0.7
+	clr	p0.6
+	acall	X1d74
+	setb	p0.6
+X1bd9:	mov	66h,#6
+	mov	a,32h
+X1bde:	clr	p0.7
+	jnb	acc.5,X1be5
+	setb	p0.7
+X1be5:	clr	p0.6
+	acall	X1d74
+	setb	p0.6
+	rl	a
+	djnz	66h,X1bde
+	mov	66h,#4
+	mov	a,65h
+X1bf4:	clr	p0.7
+	jnb	acc.0,X1bfb
+	setb	p0.7
+X1bfb:	clr	p0.6
+	acall	X1d74
+	setb	p0.6
+	rr	a
+	djnz	66h,X1bf4
+	setb	p0.5
+	ret	
+;
+X1c08:	mov	32h,#0
+	mov	4ah,#0eh
+X1c0e:	mov	65h,#0fh
+	acall	X1bbf
+	inc	32h
+	djnz	4ah,X1c0e
+	ret	
+;
+X1c19:	mov	32h,#0
+	mov	4ah,#0eh
+X1c1f:	mov	65h,#0
+	acall	X1bbf
+	inc	32h
+	djnz	4ah,X1c1f
+	ret	
+;
+X1c2a:	xchd	a,@r1
+	inc	@r0
+	cjne	a,0a7h,X1c95
+	movx	a,@r1
+	movx	@r1,a
+	mov	0f7h,@r0
+	mov	a,@r1
+	ljmp	X0108
+;
+	inc	r0
+	inc	r0
+	inc	r0
+	inc	r0
+	inc	r0
+	inc	r0
+	ljmp	X010e
+;
+	inc	r7
+	inc	r5
+	jb	ov,X1bd9
+	setb	p1.5
+	nop	
+;
+	org	1c4dh
+;
+	clr	p1.4
+	nop	
+;
+	org	1c55h
+;
+	clr	p1.5
+	ret	
+;
+X1c58:	setb	p1.4
+	nop	
+;
+	org	1c60h
+;
+	clr	p1.4
+	nop	
+;
+	org	1c68h
+;
+	setb	p1.5
+	nop	
+;
+	org	1c70h
+;
+	setb	p1.4
+	nop	
+;
+	org	1c77h
+;
+	clr	p1.5
+	ret	
+;
+X1c7a:	mov	a,74h
+	jnb	acc.7,X1c83
+	setb	p1.4
+	sjmp	X1c85
+;
+X1c83:	clr	p1.4
+X1c85:	setb	p1.5
+	nop	
+;
+	org	1c8dh
+;
+	clr	p1.5
+	ret	
+;
+X1c90:	mov	a,74h
+	setb	acc.6
+	mov	74h,a
+	setb	p1.5
+	nop	
+;
+	org	1c9eh
+;
+	jb	p1.4,X1ca7
+	mov	a,74h
+	clr	acc.6
+	mov	74h,a
+X1ca7:	clr	p1.5
+	ret	
+;
+X1caa:	mov	7eh,#8
+X1cad:	mov	a,74h
+	clr	acc.7
+	mov	74h,a
+	mov	a,70h
+	jnb	acc.7,X1cbe
+	mov	a,74h
+	setb	acc.7
+	mov	74h,a
+X1cbe:	acall	X1c7a
+	mov	a,70h
+	rl	a
+	mov	70h,a
+	djnz	7eh,X1cad
+	acall	X1c90
+	ret	
+;
+X1ccb:	mov	71h,#0
+	mov	7eh,#8
+X1cd1:	mov	a,71h
+	rl	a
+	mov	71h,a
+	acall	X1c90
+	mov	a,74h
+	jnb	acc.6,X1ce3
+	mov	a,71h
+	setb	acc.0
+	mov	71h,a
+X1ce3:	djnz	7eh,X1cd1
+	mov	a,74h
+	setb	acc.7
+	mov	74h,a
+	acall	X1c7a
+	ret	
+;
+X1cef:	acall	X1c43
+	mov	70h,#0a0h
+	acall	X1caa
+	mov	70h,72h
+	acall	X1caa
+	acall	X1c43
+	mov	70h,#0a1h
+	acall	X1caa
+	acall	X1ccb
+	mov	@r0,71h
+	acall	X1c58
+	inc	72h
+	inc	r0
+	djnz	73h,X1cef
+	ret	
+;
+X1d0f:	acall	X1c43
+	mov	70h,#0a0h
+	acall	X1caa
+	mov	70h,72h
+	acall	X1caa
+	mov	70h,@r0
+	acall	X1caa
+	acall	X1c58
+	acall	X1d7a
+	inc	72h
+	inc	r0
+	djnz	73h,X1d0f
+	ret	
+;
+X1d2a:	mov	4fh,#55h
+	mov	50h,#0
+	mov	51h,#0
+	mov	52h,#0
+	mov	53h,#32h
+	mov	54h,#0
+	mov	72h,#0
+	mov	r0,#4fh
+	mov	73h,#6
+	acall	X1d0f
+	ret	
+;
+X1d47:	mov	33h,#0
+	mov	34h,#0
+	mov	35h,#0
+	mov	36h,#0
+	mov	37h,#0
+	mov	6dh,#0
+	mov	6eh,#0
+	mov	6fh,#55h
+	mov	72h,#6
+	mov	r0,#33h
+	mov	73h,#5
+	acall	X1d0f
+	mov	72h,#0bh
+	mov	r0,#6dh
+	mov	73h,#3
+	acall	X1d0f
+	ret	
+;
+X1d74:	nop	
+;
+	org	1d79h
+;
+	ret	
+;
+X1d7a:	mov	r2,#0ah
+X1d7c:	mov	r3,#64h
+X1d7e:	djnz	r3,X1d7e
+	djnz	r2,X1d7c
+	ret	
+;
+X1d83:	mov	r2,#0ah
+X1d85:	mov	r3,#0fah
+X1d87:	djnz	r3,X1d87
+	djnz	r2,X1d85
+	ret	
+;
+X1d8c:	mov	r2,#0c8h
+X1d8e:	mov	r3,#0ah
+X1d90:	mov	r4,#0fah
+X1d92:	djnz	r4,X1d92
+	djnz	r3,X1d90
+	djnz	r2,X1d8e
+	ret	
+;
+;	Register/Memory Equates
+;
+rb0r0	equ	0
+rb0r1	equ	1
+rb0r2	equ	2
+rb0r3	equ	3
+rb0r4	equ	4
+rb0r5	equ	5
+rb0r6	equ	6
+rb0r7	equ	7
+rb2r5	equ	15h
+;
+;	Miscellaneous equates
+;
+;  These are addresses referenced in the code but
+;  which are in the middle of a multibyte instruction
+;  or are addresses outside the initialized space
+;
+X0108	equ	108h
+X010e	equ	10eh
+X1c43	equ	1c43h
+X1c95	equ	1c95h
+X3a74	equ	3a74h
+X750f	equ	750fh
+Xffa8	equ	0ffa8h
+;
+	end
+;
+
