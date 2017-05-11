@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ADE7753
+D Single-Phase Multifunction Metering IC with di/dt Sensor Interface
+F ../Datasheets/ADE7753.pdf
+$ENDCMP
+#
+#End Doc Library
