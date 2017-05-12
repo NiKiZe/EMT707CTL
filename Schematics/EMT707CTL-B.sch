@@ -28,6 +28,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:ade7753
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -177,8 +178,6 @@ F 3 "" H 2050 2300 50  0000 C CNN
 $EndComp
 Text GLabel 2150 2150 1    60   Input ~ 0
 NIN
-Text GLabel 2700 2150 1    60   Input ~ 0
-LIN
 $Comp
 L R R2
 U 1 1 5914C4B0
@@ -236,8 +235,6 @@ F 3 "" H 4150 3600 50  0000 C CNN
 	1    4150 3600
 	0    1    1    0   
 $EndComp
-Text Label 3700 2400 0    60   ~ 0
-GND
 $Comp
 L CP E1
 U 1 1 5914E028
@@ -323,7 +320,7 @@ Text GLabel 6700 3250 0    60   Input ~ 0
 V1P
 Text GLabel 6700 3400 0    60   Input ~ 0
 V1N
-Text GLabel 2050 2750 3    60   BiDi ~ 0
+Text GLabel 2050 2750 3    60   Output ~ 0
 GND
 Text GLabel 1850 2700 0    60   Output ~ 0
 V1P
@@ -509,7 +506,7 @@ F 3 "" H 6900 4600 50  0000 C CNN
 	1    6900 4600
 	0    -1   -1   0   
 $EndComp
-Text GLabel 6900 4350 0    60   BiDi ~ 0
+Text GLabel 6900 4350 0    60   Input ~ 0
 GND
 $Comp
 L CP_Small E5
@@ -577,10 +574,6 @@ F 3 "" H 7850 2600 50  0000 C CNN
 	1    7850 2600
 	-1   0    0    1   
 $EndComp
-Text GLabel 7100 2500 0    60   Input ~ 0
-VCC
-Text GLabel 8000 2400 2    60   BiDi ~ 0
-GND
 $Comp
 L Crystal XT1
 U 1 1 59169C1F
@@ -771,8 +764,6 @@ Wire Wire Line
 Wire Wire Line
 	2550 3400 2600 3400
 Wire Wire Line
-	600  2050 600  1850
-Wire Wire Line
 	2550 3400 2550 3500
 Wire Wire Line
 	2550 3500 2600 3500
@@ -797,26 +788,17 @@ Wire Wire Line
 Wire Wire Line
 	2300 3500 2350 3500
 Wire Wire Line
-	2550 3600 2550 3700
+	2550 3600 2550 3750
 Connection ~ 2550 3700
 Connection ~ 2550 3600
-Wire Wire Line
-	7100 2500 7300 2500
-Wire Wire Line
-	7300 2500 7300 2850
 Connection ~ 7650 2850
 Connection ~ 7300 2850
 Connection ~ 8000 2850
-Wire Wire Line
-	6900 4350 7200 4350
-Wire Wire Line
-	7100 4300 7100 5100
 Wire Wire Line
 	7400 4300 7400 4650
 Connection ~ 7400 4450
 Wire Wire Line
 	7200 4350 7200 4650
-Connection ~ 7100 4350
 Connection ~ 7200 4450
 Wire Wire Line
 	1950 3700 3900 3700
@@ -842,11 +824,7 @@ Connection ~ 7650 2700
 Wire Wire Line
 	7300 2850 8000 2850
 Wire Wire Line
-	8000 2400 7850 2400
-Wire Wire Line
-	7850 2400 7850 2500
-Wire Wire Line
-	7650 2500 8300 2500
+	7650 2500 8450 2500
 Connection ~ 7850 2500
 Wire Wire Line
 	8300 2500 8300 2850
@@ -912,4 +890,99 @@ Wire Wire Line
 	7250 5200 7100 5200
 Text Notes 7450 7500 0    60   ~ 0
 EMT707CTL-B
+Wire Wire Line
+	1350 3200 1350 3400
+Wire Wire Line
+	7100 4300 7100 5100
+Wire Wire Line
+	6900 4350 7100 4350
+Connection ~ 7100 4350
+$Comp
+L GND #PWR01
+U 1 1 59159E6F
+P 2550 3750
+F 0 "#PWR01" H 2550 3500 50  0001 C CNN
+F 1 "GND" H 2550 3600 50  0000 C CNN
+F 2 "" H 2550 3750 50  0000 C CNN
+F 3 "" H 2550 3750 50  0000 C CNN
+	1    2550 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR02
+U 1 1 59159F10
+P 2100 4100
+F 0 "#PWR02" H 2100 3950 50  0001 C CNN
+F 1 "VCC" H 2100 4250 50  0000 C CNN
+F 2 "" H 2100 4100 50  0000 C CNN
+F 3 "" H 2100 4100 50  0000 C CNN
+	1    2100 4100
+	-1   0    0    1   
+$EndComp
+$Comp
+L VCC #PWR03
+U 1 1 5915AF4A
+P 7300 2700
+F 0 "#PWR03" H 7300 2550 50  0001 C CNN
+F 1 "VCC" H 7300 2850 50  0000 C CNN
+F 2 "" H 7300 2700 50  0000 C CNN
+F 3 "" H 7300 2700 50  0000 C CNN
+	1    7300 2700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7300 2700 7300 2850
+$Comp
+L GND #PWR04
+U 1 1 5915B117
+P 8450 2500
+F 0 "#PWR04" H 8450 2250 50  0001 C CNN
+F 1 "GND" H 8450 2350 50  0000 C CNN
+F 2 "" H 8450 2500 50  0000 C CNN
+F 3 "" H 8450 2500 50  0000 C CNN
+	1    8450 2500
+	1    0    0    -1  
+$EndComp
+Connection ~ 8300 2500
+Text GLabel 2700 2150 1    60   Input ~ 0
+LIN
+Text GLabel 2400 1250 3    60   Output ~ 0
+LIN
+Text GLabel 2200 1250 3    60   Input ~ 0
+NOUT
+Text GLabel 2300 1250 3    60   Output ~ 0
+NIN
+$Comp
+L CONN_01X03 P0
+U 1 1 5915C428
+P 2300 1050
+F 0 "P0" H 2300 1250 50  0000 C CNN
+F 1 "CONN_01X03" V 2400 1050 50  0000 C CNN
+F 2 "" H 2300 1050 50  0000 C CNN
+F 3 "" H 2300 1050 50  0000 C CNN
+	1    2300 1050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L PWR_FLAG #FLG05
+U 1 1 59161A0C
+P 3900 2400
+F 0 "#FLG05" H 3900 2495 50  0001 C CNN
+F 1 "PWR_FLAG" H 3900 2580 50  0000 C CNN
+F 2 "" H 3900 2400 50  0000 C CNN
+F 3 "" H 3900 2400 50  0000 C CNN
+	1    3900 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG06
+U 1 1 59161B0E
+P 2700 2150
+F 0 "#FLG06" H 2700 2245 50  0001 C CNN
+F 1 "PWR_FLAG" H 2700 2330 50  0000 C CNN
+F 2 "" H 2700 2150 50  0000 C CNN
+F 3 "" H 2700 2150 50  0000 C CNN
+	1    2700 2150
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
